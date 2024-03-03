@@ -1,0 +1,12 @@
+[Service]
+WorkingDirectory=/home/pi/scripts
+ExecStart=/bin/bash /home/pi/scripts/hg_picam_timelapse.sh
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=propanel
+User=pi
+Group=pi
+Environment=NODE_ENV=production
+[Install]
+WantedBy=multi-user.target
